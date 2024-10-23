@@ -17,17 +17,15 @@ namespace Jogo.ViewModels
         [ObservableProperty]
         private Medidor medidor;
 
-        [ObservableProperty]
-        private string cartaImage = "carta.png";
 
         [ObservableProperty]
-        private string texto = "General, uma tempestade se aproxima, deveriamos esperar ela passar?";
+        private string texto = "General, o caminho será longo, deveríamos seguir para o Oeste ou para o Noroeste.";
 
         [ObservableProperty]
         private string image = "image1.png";
 
         [ObservableProperty]
-        private string name = "Eryx";
+        private string name = "Agapetos";
 
         [ObservableProperty]
         private int idMedidor = 1;
@@ -54,6 +52,13 @@ namespace Jogo.ViewModels
         [ObservableProperty]
         private bool inicioGuerra;
 
+        [ObservableProperty]
+        private string txtopc1 = "Vamos, para o Oeste";
+
+        [ObservableProperty]
+        private string txtopc2 = "Continuem no Noroeste";
+
+        private int retorno = 0;
 
 
         CartaService cartaService;
@@ -97,6 +102,7 @@ namespace Jogo.ViewModels
             Medidor = await medidorService.GetMedidorByIdAsync(id);
             if (opcao == 1)
             {
+                IdMedidor += 1;
                 EstatisExercito = EstatisExercito + Medidor.EstatisExercito;
                 EstatisConfianca = EstatisConfianca +  Medidor.EstatisConfiaca;
                 EstatisMantimentos = EstatisMantimentos + Medidor.EstatisMantimentos;
@@ -107,7 +113,7 @@ namespace Jogo.ViewModels
             }
             else if (opcao == 2 )
             {
-                IdMedidor += 1;
+                IdMedidor += 2;
                 EstatisExercito = EstatisExercito + Medidor.EstatisExercito;
                 EstatisConfianca = EstatisConfianca + Medidor.EstatisConfiaca;
                 EstatisMantimentos = EstatisMantimentos + Medidor.EstatisMantimentos;
@@ -127,9 +133,11 @@ namespace Jogo.ViewModels
 
             if(IdMedidor >= 6)
             {
-                IdMedidor = 1;
+                IdMedidor = 0;
             }
 
+           
+            
         }
        
         public async void TrocarCarta()
@@ -138,29 +146,22 @@ namespace Jogo.ViewModels
 
             
 
-            if (Id <= 3) {
+            if (Id <= 20) {
                 Image = "image" + Id + ".png";
                 Carta = await cartaService.GetCartaByIdAsync(Id);
                 Name = Carta.personName;
                 Texto = Carta.personTexto;
-                if (Id == 2)
-                {
-                    CartaImage = "fundo2.png";
-                }
-                else
-                {
-                    Image = "";
-                    CartaImage = "carta.png";
-                }
+                Txtopc1 = Carta.PersonOpc1;
+                Txtopc2 = Carta.PersonOpc2;
 
 
             }
-            else
+            else if (Id>20)
             {
                 Id = 1;
                 Image = "image" + Id + ".png";
-                Name = "Eryx";
-                Texto = "General, uma tempestade se aproxima, deveriamos esperar ela passar ?";
+                Name = "Agapetos";
+                Texto = "General, o caminho será longo, deveríamos seguir para o Oeste ou para o Noroeste?";
                 
             }     
             
@@ -186,8 +187,8 @@ namespace Jogo.ViewModels
                 Application.Current.MainPage.DisplayAlert("PARABÉNS", "VOCÊ SOBREVIVEU A GUERRA FINALIZOU O JOGO!", "Voltar do Começo");
                 Id = 1;
                 Image = "image" + Id + ".png";
-                Name = "Eryx";
-                Texto = "General, uma tempestade se aproxima, deveriamos esperar ela passar ?";
+                Name = "Agapetos";
+                Texto = "General, o caminho será longo, deveríamos seguir para o Oeste ou para o Noroeste?";
                 EstatisMantimentos = 100;
                 EstatisExercito = 100;
                 EstatisExercito = 100;

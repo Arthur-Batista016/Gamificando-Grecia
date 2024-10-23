@@ -8,46 +8,64 @@
             <Grid BackgroundColor="Beige" HeightRequest="100" WidthRequest="500" Margin="0,40,0,0">
             <Image
                 Source="medidor_mantimento.png"
-                HeightRequest="50"
-                Margin="0,15,230,20"/>
+                HeightRequest="90"
+                Margin="0,0,300,30"/>
             
             <Label 
                 Text="{Binding EstatisMantimentos}"
-                Margin="120,67,0,0"/>
+                Margin="80,70,0,0"
+                />
             
             <Image
                 Source="medidor_exercito.png"
-                HeightRequest="50"
-                Margin="35,0,10,10"/>
+                HeightRequest="90"
+                Margin="35,0,10,40"/>
             
             <Label 
                 Text="{Binding EstatisExercito}"
-                Margin="250,70,0,0"/>
+                Margin="250,75,0,0"/>
             
             <Image
                 Source="medidor_confianca.png"
-                HeightRequest="60"
-                Margin="280,0,0,10"/>
+                HeightRequest="100"
+                Margin="300,0,0,40"/>
             
             <Label 
                 Text="{Binding EstatisConfianca}"
-                Margin="375,70,0,0"/>
+                Margin="389,75,0,0"/>
         </Grid>
         </Border>
 
         <Grid>
-            <Label
-            x:Name="secondOption"
-            Text="Teste teste"
-            TextColor="White"
-             Margin="500,0,0,0"   
-            />
+
+            <Image
+                x:Name="secondOptionimg"
+                IsVisible="False"
+                Source="pergaminho.png"
+                HeightRequest="300"
+                Margin="900,0,0,0"
+                />
+            
+                <Label
+                x:Name="secondOption"
+                Text="{Binding Txtopc2}"
+                IsVisible="False"
+                TextColor="Black"
+                 HorizontalTextAlignment="End"
+                 VerticalTextAlignment="Center"  
+                 Margin="130,0,170,0"
+                 FontSize="13"/>
+           
+
+
+
+
             <ImageButton
                 x:Name="opcao2"
                 Command="{Binding Opcao2}"
                 Source="option_button.png"
                 HeightRequest="100"
-                Margin="360,100,0,00"
+                Margin="350,100,0,00"
                 WidthRequest="100"
                 BorderWidth="0"
                 Rotation="180"
@@ -60,37 +78,53 @@
                 </ImageButton.GestureRecognizers>
             </ImageButton>
             
-            <Grid WidthRequest="260" Margin="0,70,0,0" HeightRequest="380">
-                <Image Source="{Binding CartaImage}"  HeightRequest="500" Margin="0,50,0,0" />
+            <Grid WidthRequest="260" Margin="0,50,0,0" HeightRequest="400">
+                <Image Source="carta.png"  HeightRequest="600" Margin="0,50,0,0" />
                 <Label 
-                     Margin="0,50,0,240"
+                     Margin="0,40,0,240"
                      HorizontalTextAlignment="Center"
                      Text="{Binding Texto}"
-                     HeightRequest="60"
+                     HeightRequest="100"
                     WidthRequest="200"
                     TextColor="Black"
+                    FontSize="Small"
                     />
 
-                <Image
-                    Source="{Binding Image}"
-                    HeightRequest="400"
-                    Margin="0,110,0,0"/>
-
+                
 
             </Grid>
 
 
             <Label
-             HeightRequest="20"
-             Margin="0,500,10,0"    
+             
+             Margin="10,470,10,0"    
              HorizontalTextAlignment="Center"
              Text="{Binding Name}"
-             TextColor="White"/>
+             TextColor="White"
+              FontSize="15"/>
+
+
+
+
+            <Image
+            x:Name="firstOptionimg"
+            IsVisible="False"
+            Source="pergaminho.png"
+            HeightRequest="300"
+            Margin="0,0,900,0"
+            />
+
 
             <Label
                 x:Name="firstOption"
-                Text="Teste teste"
-                TextColor="White"
+                IsVisible="False"
+                Text="{Binding Txtopc1}"
+                TextColor="Black"
+                HorizontalTextAlignment="Start"
+                VerticalTextAlignment="Center"
+                Margin="160,0,0,0"
+                FontSize="12"
+  
                 />
             <ImageButton
                  x:Name="opcao1"
@@ -152,7 +186,8 @@
             <Label
                 Text="DIAS ATÉ A GUERRA:"
                 TextColor="White"
-                Margin="650,40,0,0"
+                Margin="600,60,0,0"
+                FontSize="Large"
                 
                
                 />
@@ -161,7 +196,8 @@
             <Label
              Text="{Binding DiasGuerra}"
              TextColor="White"
-             Margin="800,39,0,0"
+             Margin="920,60,0,0"
+                FontSize="Large"
              />
 
         </Grid>
