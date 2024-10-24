@@ -162,7 +162,8 @@ namespace Jogo.ViewModels
                 Image = "image" + Id + ".png";
                 Name = "Agapetos";
                 Texto = "General, o caminho será longo, deveríamos seguir para o Oeste ou para o Noroeste?";
-                
+                 Txtopc1 = Carta.PersonOpc1;
+                Txtopc2 = Carta.PersonOpc2;
             }     
             
         }

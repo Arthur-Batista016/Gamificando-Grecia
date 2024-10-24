@@ -51,10 +51,13 @@
                 Text="{Binding Txtopc2}"
                 IsVisible="False"
                 TextColor="Black"
-                 HorizontalTextAlignment="End"
+                    WidthRequest="280"
+                    HorizontalOptions="End"
+                 HorizontalTextAlignment="Start"
+                 LineBreakMode="CharacterWrap"
                  VerticalTextAlignment="Center"  
                  Margin="130,0,170,0"
-                 FontSize="13"/>
+                 FontSize="18"/>
            
 
 
@@ -79,15 +82,16 @@
             </ImageButton>
             
             <Grid WidthRequest="260" Margin="0,50,0,0" HeightRequest="400">
-                <Image Source="carta.png"  HeightRequest="600" Margin="0,50,0,0" />
+                <Image Source="{Binding Image}"  HeightRequest="6100" Margin="0,50,0,0" />
                 <Label 
-                     Margin="0,40,0,240"
+                     Margin="40,100,40,140"
                      HorizontalTextAlignment="Center"
                      Text="{Binding Texto}"
-                     HeightRequest="100"
-                    WidthRequest="200"
+                    LineBreakMode="CharacterWrap"
+                     HeightRequest="160"
+                    WidthRequest="160"
                     TextColor="Black"
-                    FontSize="Small"
+                    FontSize="14"
                     />
 
                 
@@ -120,10 +124,13 @@
                 IsVisible="False"
                 Text="{Binding Txtopc1}"
                 TextColor="Black"
+                WidthRequest="300"
+                HorizontalOptions="Start"
                 HorizontalTextAlignment="Start"
                 VerticalTextAlignment="Center"
-                Margin="160,0,0,0"
-                FontSize="12"
+                Margin="140,0,0,0"
+                LineBreakMode="CharacterWrap"
+                FontSize="16"
   
                 />
             <ImageButton
@@ -131,7 +138,7 @@
                  Command="{Binding Opcao1}"
                  Source="option_button.png"
                  HeightRequest="100"
-                 Margin="40,100,400,0"
+                 Margin="60,100,400,0"
                  WidthRequest="100"
                  BorderWidth="0"
                  BackgroundColor="Transparent"
@@ -186,8 +193,9 @@
             <Label
                 Text="DIAS ATÉ A GUERRA:"
                 TextColor="White"
-                Margin="600,60,0,0"
+                Margin="0,60,0,0"
                 FontSize="Large"
+                HorizontalOptions="Center"
                 
                
                 />
@@ -196,8 +204,9 @@
             <Label
              Text="{Binding DiasGuerra}"
              TextColor="White"
-             Margin="920,60,0,0"
+             Margin="380,60,0,0"
                 FontSize="Large"
+             HorizontalOptions="Center"
              />
 
         </Grid>
