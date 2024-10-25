@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using System.Windows.Input;
 using Jogo.Services;
 using System.Runtime.Intrinsics.X86;
+using Jogo.Views;
 
 namespace Jogo.ViewModels
 {
@@ -28,7 +29,7 @@ namespace Jogo.ViewModels
         private string name = "Agapetos";
 
         [ObservableProperty]
-        private int idMedidor = 1;
+        private int idMedidor = 0;
 
 
         [ObservableProperty]
@@ -47,10 +48,23 @@ namespace Jogo.ViewModels
         private string textoGuerra;
 
         [ObservableProperty]
+        private string momentoGuerra= "DIAS ATÉ A GUERRA:";
+
+        [ObservableProperty]
         private int count = 0;
 
         [ObservableProperty]
         private bool inicioGuerra;
+
+        [ObservableProperty]
+        private bool fimGuerra;
+
+        [ObservableProperty]
+        private bool derrota;
+
+        [ObservableProperty]
+        private string motivoDerrota;
+
 
         [ObservableProperty]
         private string txtopc1 = "Vamos, para o Oeste";
@@ -60,6 +74,14 @@ namespace Jogo.ViewModels
 
         private int retorno = 0;
 
+        [ObservableProperty]
+        private string finalTxt1;
+
+        [ObservableProperty]
+        private string finalTxt2;
+
+        [ObservableProperty]
+        private string finalTxt3;
 
         CartaService cartaService;
         MedidorService medidorService;
@@ -72,22 +94,25 @@ namespace Jogo.ViewModels
 
         public ICommand FecharAvisoCommand { get; }
 
+        private readonly INavigation _navigation;
+
         public CartaViewModel()
         {
-           
+
+            
             cartaService = new CartaService();
             medidorService = new MedidorService();
             Opcao1 = new Command(() =>
             {
                 ModificarMedidor(1);
                 TrocarCarta();
-                contadorDias();
+                contadorDias(1);
             });
             Opcao2 = new Command(() =>
             {
                 ModificarMedidor(2);
                 TrocarCarta();
-                contadorDias();
+                contadorDias(2);
             });
 
             FecharAvisoCommand = new Command(retirarAviso);
@@ -98,40 +123,103 @@ namespace Jogo.ViewModels
 
         public async void ModificarMedidor(int opcao)
         {
-           
-            Medidor = await medidorService.GetMedidorByIdAsync(id);
+            if (IdMedidor % 2 != 0) 
+            {
+                
+                 IdMedidor += 1; 
+                
+            }
+      
             if (opcao == 1)
             {
+                
                 IdMedidor += 1;
-                EstatisExercito = EstatisExercito + Medidor.EstatisExercito;
-                EstatisConfianca = EstatisConfianca +  Medidor.EstatisConfiaca;
-                EstatisMantimentos = EstatisMantimentos + Medidor.EstatisMantimentos;
-                Convert.ToString(estatisExercito);
-                Convert.ToString(estatisConfianca);
-                Convert.ToString(estatisMantimentos);
-                IdMedidor += 1;
+                
+                
             }
             else if (opcao == 2 )
             {
                 IdMedidor += 2;
-                EstatisExercito = EstatisExercito + Medidor.EstatisExercito;
-                EstatisConfianca = EstatisConfianca + Medidor.EstatisConfiaca;
-                EstatisMantimentos = EstatisMantimentos + Medidor.EstatisMantimentos;
-                Convert.ToString(EstatisExercito);
-                Convert.ToString(EstatisConfianca);
-                Convert.ToString(EstatisMantimentos);
+               
 
             }
+            Medidor = await medidorService.GetMedidorByIdAsync(idMedidor);
 
-            if (EstatisConfianca>100 || EstatisExercito>100 || EstatisMantimentos > 100)
+            EstatisExercito = Math.Min(EstatisExercito + Medidor.EstatisExercito, 100);
+            EstatisMantimentos = Math.Min(EstatisMantimentos + Medidor.EstatisMantimentos, 100);
+            EstatisConfianca = Math.Min(EstatisConfianca + Medidor.EstatisConfianca, 100);
+            Convert.ToString(EstatisExercito);
+            Convert.ToString(EstatisConfianca);
+            Convert.ToString(EstatisMantimentos);
+
+          if(EstatisMantimentos <= 0)
             {
+                EstatisMantimentos = 0;
+                Derrota = true;
+                MotivoDerrota = "VOCE PERDEU TODOS OS SEUS MANTIMENTOS";
+                InicioGuerra = false;
+                FimGuerra = true;
+                DiasGuerra = 15;
+                count = 0;
+                Id = 1;
+                IdMedidor = 0;
+                Image = "image" + Id + ".png";
+                Name = "Agapetos";
+                Texto = "General, o caminho será longo, deveríamos seguir para o Oeste ou para o Noroeste?";
+                Txtopc1 = "Vamos, para o Oeste";
+                Txtopc2 = "Continuem no Noroeste";
                 EstatisMantimentos = 100;
                 EstatisExercito = 100;
                 EstatisExercito = 100;
+                MomentoGuerra = "DIAS ATÉ A GUERRA";
+            }
+            if (EstatisConfianca <= 0)
+            {
+                EstatisConfianca = 0;
+                Derrota = true;
+                MotivoDerrota = "VOCE PERDEU A CONFIANÇA DO SEU POVO";
+                InicioGuerra = false;
+                FimGuerra = true;
+                DiasGuerra = 15;
+                count = 0;
+                Id = 1;
+                IdMedidor = 0;
+                Image = "image" + Id + ".png";
+                Name = "Agapetos";
+                Texto = "General, o caminho será longo, deveríamos seguir para o Oeste ou para o Noroeste?";
+                Txtopc1 = "Vamos, para o Oeste";
+                Txtopc2 = "Continuem no Noroeste";
+                EstatisMantimentos = 100;
+                EstatisExercito = 100;
+                EstatisExercito = 100;
+                MomentoGuerra = "DIAS ATÉ A GUERRA";
+            }
+            else if (EstatisExercito <= 0)
+            {
+                EstatisExercito = 0;
+                Derrota = true;
+                MotivoDerrota = "VOCE PERDEU TODO O SEU EXÉRCITO";
+                InicioGuerra = false;
+                FimGuerra = true;
+                DiasGuerra = 15;
+                count = 0;
+                Id = 1;
+                IdMedidor = 0;
+                Image = "image" + Id + ".png";
+                Name = "Agapetos";
+                Texto = "General, o caminho será longo, deveríamos seguir para o Oeste ou para o Noroeste?";
+                Txtopc1 = "Vamos, para o Oeste";
+                Txtopc2 = "Continuem no Noroeste";
+                EstatisMantimentos = 100;
+                EstatisExercito = 100;
+                EstatisExercito = 100;
+                MomentoGuerra = "DIAS ATÉ A GUERRA";
 
             }
 
-            if(IdMedidor >= 6)
+            
+
+            if(IdMedidor >= 40)
             {
                 IdMedidor = 0;
             }
@@ -168,13 +256,14 @@ namespace Jogo.ViewModels
             
         }
 
-        public async void contadorDias()
+        public async void contadorDias(int opcao)
         {
            
            
             DiasGuerra = DiasGuerra -  1;
             Convert.ToString(DiasGuerra);
             if (Count == 0 && DiasGuerra == 0) {
+                MomentoGuerra = "DURAÇÂO DA GUERRA:";
                 InicioGuerra = true;
                 Count = 1;
                 DiasGuerra = 5;
@@ -182,26 +271,68 @@ namespace Jogo.ViewModels
             }
             if(DiasGuerra == 0 && Count == 1)
             {
-                InicioGuerra = false;
-                DiasGuerra = 15;
-                count = 0;
-                Application.Current.MainPage.DisplayAlert("PARABÉNS", "VOCÊ SOBREVIVEU A GUERRA FINALIZOU O JOGO!", "Voltar do Começo");
-                Id = 1;
-                Image = "image" + Id + ".png";
-                Name = "Agapetos";
-                Texto = "General, o caminho será longo, deveríamos seguir para o Oeste ou para o Noroeste?";
-                EstatisMantimentos = 100;
-                EstatisExercito = 100;
-                EstatisExercito = 100;
-
+                /* arrumar para o medido manter-se no 0 e quando for para o menu, e iniciar um novo jogo, volte ao inicio padrao*/
+                if (Derrota == false)
+                {
+                    InicioGuerra = false;
+                    FimGuerra = true;
+                    DiasGuerra = 15;
+                    count = 0;
+                    Id = 1;
+                    Image = "image" + Id + ".png";
+                    Name = "Agapetos";
+                    Texto = "General, o caminho será longo, deveríamos seguir para o Oeste ou para o Noroeste?";
+                    Txtopc1 = "Vamos, para o Oeste";
+                    Txtopc2 = "Continuem no Noroeste";
+                    EstatisMantimentos = 100;
+                    EstatisExercito = 100;
+                    EstatisExercito = 100;
+                    MomentoGuerra = "DIAS ATÉ A GUERRA";
+                }
+                else if(Derrota == true) {
+                    InicioGuerra = false;
+                    FimGuerra = false;
+                    DiasGuerra = 15;
+                    count = 0;
+                    Id = 1;
+                    Image = "image" + Id + ".png";
+                    Name = "Agapetos";
+                    Texto = "General, o caminho será longo, deveríamos seguir para o Oeste ou para o Noroeste?";
+                    Txtopc1 = "Vamos, para o Oeste";
+                    Txtopc2 = "Continuem no Noroeste";
+                    EstatisMantimentos = 100;
+                    EstatisExercito = 100;
+                    EstatisExercito = 100;
+                    MomentoGuerra = "DIAS ATÉ A GUERRA";
+                    EstatisConfianca = 100;
+                    EstatisExercito = 100;
+                    EstatisMantimentos = 100;
+                }
+               
+                if(opcao  == 1)
+                {
+                    FinalTxt1 = "GOOD ENDING";
+                    FinalTxt2 = "Fazendo o impossível, o Rei Leônidas derrotou os 30 mil persas com seus 300 homens e alcançou a glória";
+                    FinalTxt3 = "Bom trabalho... você defendeu seu povo!";
+                }
+                else if(opcao == 2)
+                {
+                    FinalTxt1 = "BAD ENDING";
+                    FinalTxt2 = "Em um ato de misericórdia, o Rei Leônidas decidiu poupar os persas restantes, mas sofreu um ataque surpresa e morreu em combate...";
+                    FinalTxt3 = "Você vencerá a guerra, mas à custo de sua vida... Siga em frente, Leônidas...";
+                }
 
             }
             
         }
 
-        public void retirarAviso()
+
+
+        public async void retirarAviso()
         {
             InicioGuerra = false;
+            FimGuerra = false;
+            Derrota = false;
         }
 
         
