@@ -179,10 +179,12 @@
                 <Label
                     IsVisible="{Binding InicioGuerra}"
                     Text="A GUERRA COMEÇOU"
-                    TextColor="White"
-                    Margin="300,120,0,0"
+                     HorizontalOptions="Center"
+                     Margin="0,120,0,0"
+                     FontSize="25"
+                    TextColor="Black"
+                   
                     />
-
 
                 <Button
                  Text="OK"
@@ -190,6 +192,7 @@
                  Command="{Binding FecharAvisoCommand}"
                  HeightRequest="20"
                  WidthRequest="150"
+                 Margin="0,240,0,0"
                 />
             <!--AVISO DE FIM DE GUERRA-->
             <BoxView
