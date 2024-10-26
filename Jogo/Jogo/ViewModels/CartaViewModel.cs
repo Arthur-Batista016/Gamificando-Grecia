@@ -170,7 +170,7 @@ namespace Jogo.ViewModels
                 Txtopc2 = "Continuem no Noroeste";
                 EstatisMantimentos = 100;
                 EstatisExercito = 100;
-                EstatisExercito = 100;
+                EstatisConfianca = 100;
                 MomentoGuerra = "DIAS ATÉ A GUERRA";
             }
             if (EstatisConfianca <= 0)
@@ -191,7 +191,7 @@ namespace Jogo.ViewModels
                 Txtopc2 = "Continuem no Noroeste";
                 EstatisMantimentos = 100;
                 EstatisExercito = 100;
-                EstatisExercito = 100;
+                EstatisConfianca = 100;
                 MomentoGuerra = "DIAS ATÉ A GUERRA";
             }
             else if (EstatisExercito <= 0)
@@ -212,7 +212,7 @@ namespace Jogo.ViewModels
                 Txtopc2 = "Continuem no Noroeste";
                 EstatisMantimentos = 100;
                 EstatisExercito = 100;
-                EstatisExercito = 100;
+                EstatisConfianca = 100;
                 MomentoGuerra = "DIAS ATÉ A GUERRA";
 
             }

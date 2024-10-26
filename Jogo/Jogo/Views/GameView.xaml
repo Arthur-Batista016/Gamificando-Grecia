@@ -181,18 +181,31 @@
                     Text="A GUERRA COMEÇOU"
                      HorizontalOptions="Center"
                      Margin="0,120,0,0"
-                     FontSize="25"
+                     FontSize="30"
+                    FontAttributes="Bold"
                     TextColor="Black"
                    
                     />
+            <Label
+                IsVisible="{Binding InicioGuerra}"
+                Text="AGORA SEUS MEDIDORES NÂO IRAM SUBIR MAIS!"
+                 HorizontalOptions="Center"
+                 Margin="0,220,0,0"
+                 FontSize="25"
+                FontAttributes="Bold"
+                TextColor="Black"
+   
+                />
 
-                <Button
+            <Button
                  Text="OK"
                  IsVisible="{Binding InicioGuerra}"
                  Command="{Binding FecharAvisoCommand}"
-                 HeightRequest="20"
-                 WidthRequest="150"
-                 Margin="0,240,0,0"
+                 HeightRequest="70"
+                 WidthRequest="200"
+                 Margin="0,200,0,0"
+                BackgroundColor="Gray"
+                 
                 />
             <!--AVISO DE FIM DE GUERRA-->
             <BoxView
@@ -217,7 +230,8 @@
             Text="{Binding FinalTxt1}"
             TextColor="Black"
             HorizontalOptions="Center"
-            Margin="0,120,0,0"
+            Margin="0,100,0,0"
+            FontAttributes="Bold"
             FontSize="25"
             />
 
@@ -228,8 +242,10 @@
               LineBreakMode="CharacterWrap"
               HorizontalOptions="Center"
               HorizontalTextAlignment="Center"
-              Margin="0,200,0,0"
-              FontSize="13"
+              Margin="0,170,0,0"
+              FontAttributes="Bold"
+              FontSize="20"
+              WidthRequest="400"
             
              />
 
@@ -238,17 +254,21 @@
                  Text="{Binding FinalTxt3}"
                  TextColor="Black"
                  HorizontalOptions="Center"
-                 Margin="0,300,0,0"
-                 FontSize="25"
+                 FontAttributes="Bold"
+                 Margin="20,340,0,0"
+                 FontSize="20"
+                 WidthRequest="400"
              />
 
             <Button
              Text="OK"
              IsVisible="{Binding FimGuerra}"
              Command="{Binding FecharAvisoCommand}"
-             HeightRequest="20"
-             WidthRequest="150"
-             Margin="0,240,0,0"
+             HeightRequest="50"
+             WidthRequest="200"
+             Margin="0,310,0,0"
+             BackgroundColor="Gray"
+             FontAttributes="Bold"
             />
 
 
@@ -297,6 +317,7 @@
               Margin="0,120,0,0"  
               HeightRequest="80"
               WidthRequest="150"
+              BackgroundColor="Gray"
              />
 
 
