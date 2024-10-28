@@ -65,7 +65,7 @@ INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisCon
 INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (8, 0, -10, 5);
 
 INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (9, 0, 0, -10);
-INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (9, -10, 0, 15);
+INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (9, -10, 0, -25);
 
 INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (10, -5, 0, 5); 
 INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (10, -5, -15, 10);  
@@ -83,7 +83,7 @@ INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisCon
 INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (14, -5, 0, 5);
 
 INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (15, -5, -5, 10);
-INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (15, 0, 0, 0);
+INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (15, 0, 0, -30);
 
 INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (16, -5, -15, -5);
 INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (16, -10, -5, -5);
