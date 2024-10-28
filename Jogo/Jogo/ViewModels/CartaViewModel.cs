@@ -157,63 +157,21 @@ namespace Jogo.ViewModels
                 EstatisMantimentos = 0;
                 Derrota = true;
                 MotivoDerrota = "VOCE PERDEU TODOS OS SEUS MANTIMENTOS";
-                InicioGuerra = false;
-                FimGuerra = true;
-                DiasGuerra = 15;
-                count = 0;
-                Id = 1;
-                IdMedidor = 0;
-                Image = "image" + Id + ".png";
-                Name = "Agapetos";
-                Texto = "General, o caminho será longo, deveríamos seguir para o Oeste ou para o Noroeste?";
-                Txtopc1 = "Vamos, para o Oeste";
-                Txtopc2 = "Continuem no Noroeste";
-                EstatisMantimentos = 100;
-                EstatisExercito = 100;
-                EstatisConfianca = 100;
-                MomentoGuerra = "DIAS ATÉ A GUERRA";
+               
             }
             if (EstatisConfianca <= 0)
             {
                 EstatisConfianca = 0;
                 Derrota = true;
                 MotivoDerrota = "VOCE PERDEU A CONFIANÇA DO SEU POVO";
-                InicioGuerra = false;
-                FimGuerra = true;
-                DiasGuerra = 15;
-                count = 0;
-                Id = 1;
-                IdMedidor = 0;
-                Image = "image" + Id + ".png";
-                Name = "Agapetos";
-                Texto = "General, o caminho será longo, deveríamos seguir para o Oeste ou para o Noroeste?";
-                Txtopc1 = "Vamos, para o Oeste";
-                Txtopc2 = "Continuem no Noroeste";
-                EstatisMantimentos = 100;
-                EstatisExercito = 100;
-                EstatisConfianca = 100;
-                MomentoGuerra = "DIAS ATÉ A GUERRA";
+                
             }
             else if (EstatisExercito <= 0)
             {
                 EstatisExercito = 0;
                 Derrota = true;
                 MotivoDerrota = "VOCE PERDEU TODO O SEU EXÉRCITO";
-                InicioGuerra = false;
-                FimGuerra = true;
-                DiasGuerra = 15;
-                count = 0;
-                Id = 1;
-                IdMedidor = 0;
-                Image = "image" + Id + ".png";
-                Name = "Agapetos";
-                Texto = "General, o caminho será longo, deveríamos seguir para o Oeste ou para o Noroeste?";
-                Txtopc1 = "Vamos, para o Oeste";
-                Txtopc2 = "Continuem no Noroeste";
-                EstatisMantimentos = 100;
-                EstatisExercito = 100;
-                EstatisConfianca = 100;
-                MomentoGuerra = "DIAS ATÉ A GUERRA";
+               
 
             }
 
@@ -276,44 +234,20 @@ namespace Jogo.ViewModels
                 {
                     InicioGuerra = false;
                     FimGuerra = true;
-                    DiasGuerra = 15;
-                    count = 0;
-                    Id = 1;
-                    Image = "image" + Id + ".png";
-                    Name = "Agapetos";
-                    Texto = "General, o caminho será longo, deveríamos seguir para o Oeste ou para o Noroeste?";
-                    Txtopc1 = "Vamos, para o Oeste";
-                    Txtopc2 = "Continuem no Noroeste";
-                    EstatisMantimentos = 100;
-                    EstatisExercito = 100;
-                    EstatisExercito = 100;
-                    MomentoGuerra = "DIAS ATÉ A GUERRA";
+                   
                 }
                 else if(Derrota == true) {
                     InicioGuerra = false;
                     FimGuerra = false;
-                    DiasGuerra = 15;
-                    count = 0;
-                    Id = 1;
-                    Image = "image" + Id + ".png";
-                    Name = "Agapetos";
-                    Texto = "General, o caminho será longo, deveríamos seguir para o Oeste ou para o Noroeste?";
-                    Txtopc1 = "Vamos, para o Oeste";
-                    Txtopc2 = "Continuem no Noroeste";
-                    EstatisMantimentos = 100;
-                    EstatisExercito = 100;
-                    EstatisExercito = 100;
-                    MomentoGuerra = "DIAS ATÉ A GUERRA";
-                    EstatisConfianca = 100;
-                    EstatisExercito = 100;
-                    EstatisMantimentos = 100;
+                   
                 }
                
                 if(opcao  == 1)
                 {
                     FinalTxt1 = "GOOD ENDING";
-                    FinalTxt2 = "Fazendo o impossível, o Rei Leônidas derrotou os 30 mil persas com seus 300 homens e alcançou a glória";
+                    FinalTxt2 = "Fazendo o impossível, o Rei Leônidas derrotou os 300 mil persas com seus 300 homens e alcançou a glória";
                     FinalTxt3 = "Bom trabalho... você defendeu seu povo!";
+
                 }
                 else if(opcao == 2)
                 {
@@ -328,11 +262,12 @@ namespace Jogo.ViewModels
 
 
 
-        public async void retirarAviso()
+        public async void  retirarAviso()
         {
             InicioGuerra = false;
             FimGuerra = false;
             Derrota = false;
+          
         }
 
         

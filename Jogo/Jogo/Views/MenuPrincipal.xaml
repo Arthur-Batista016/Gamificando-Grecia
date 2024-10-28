@@ -2,11 +2,41 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Jogo.Views.MenuPrincipal"
-             Title="MenuPrincipal">
+             BackgroundImageSource="background_menu.jpg">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Image
+            Source="logo_menu.png"
+            VerticalOptions="Start"
+            HorizontalOptions="Center"
+            HeightRequest="300"/>
+        <Grid Margin="0,170,100,0">
+            <Button
+            x:Name="jogar"
+            Clicked="jogar_Clicked"
+            Text="Iniciar Jogo"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Margin="0,0,200,0"
+            HeightRequest="100"
+            WidthRequest="250"
+            Background="DarkGray"
+            FontSize="20"
+            TextColor="Black"/>
+
+        <Button
+            Text="Créditos"
+            BackgroundColor="DarkGray"
+            Margin="400,0,0,0"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            HeightRequest="100"
+            WidthRequest="250"
+            FontSize="20"
+            TextColor="Black"
+            BorderColor="Black"
+            
+            />
+
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>

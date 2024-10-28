@@ -78,6 +78,7 @@
                 BorderWidth="0"
                 Rotation="180"
                 BackgroundColor="Transparent"
+                Scale="1.0"
                 
                 >
                 <ImageButton.GestureRecognizers>
@@ -134,7 +135,7 @@
                 HorizontalTextAlignment="Start"
                 VerticalTextAlignment="Center"
                 FontAttributes="Bold"
-                Margin="150,0,0,0"
+                Margin="170,0,0,0"
                 LineBreakMode="CharacterWrap"
                 FontSize="20"
   
@@ -148,6 +149,7 @@
                  WidthRequest="100"
                  BorderWidth="0"
                  BackgroundColor="Transparent"
+                 Scale="1.0"
                 
                 >
               
@@ -198,6 +200,7 @@
                 />
 
             <Button
+                x:Name="inicio"
                  Text="OK"
                  IsVisible="{Binding InicioGuerra}"
                  Command="{Binding FecharAvisoCommand}"
@@ -205,8 +208,14 @@
                  WidthRequest="200"
                  Margin="0,200,0,0"
                 BackgroundColor="Gray"
-                 
-                />
+               >
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="PointerGestureRecognizer_PointerEntered_2" PointerExited="PointerGestureRecognizer_PointerExited_2"/>
+                </Button.GestureRecognizers>
+
+
+
+            </Button>
             <!--AVISO DE FIM DE GUERRA-->
             <BoxView
             IsVisible="{Binding FimGuerra}"
@@ -261,15 +270,22 @@
              />
 
             <Button
-             Text="OK"
+             x:Name="fim"
+             Text="VOLTAR AO MENU"
              IsVisible="{Binding FimGuerra}"
              Command="{Binding FecharAvisoCommand}"
-             HeightRequest="50"
-             WidthRequest="200"
+             Clicked="voltar_menu_Clicked"
+             HeightRequest="80"
+             WidthRequest="150"
              Margin="0,310,0,0"
              BackgroundColor="Gray"
              FontAttributes="Bold"
-            />
+            >
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="PointerGestureRecognizer_PointerEntered_3"  PointerExited="PointerGestureRecognizer_PointerExited_3"/>
+                </Button.GestureRecognizers>
+
+            </Button>
 
 
             <!--AVISO DE DERROTA-->
@@ -310,15 +326,22 @@
 
 
             <Button
+              x:Name="derrota"
               Text="VOLTAR AO MENU"
               IsVisible="{Binding Derrota}"
               Command="{Binding FecharAvisoCommand}"
+                Clicked="voltar_menu_Clicked"
               HorizontalOptions="Center"
               Margin="0,120,0,0"  
               HeightRequest="80"
               WidthRequest="150"
               BackgroundColor="Gray"
-             />
+             >
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="PointerGestureRecognizer_PointerEntered_4"  PointerExited="PointerGestureRecognizer_PointerExited_4"/>
+                </Button.GestureRecognizers>
+
+            </Button>
 
 
 

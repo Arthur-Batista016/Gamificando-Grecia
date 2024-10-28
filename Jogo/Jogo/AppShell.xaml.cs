@@ -5,6 +5,8 @@
         public AppShell()
         {
             InitializeComponent();
+            Routing.RegisterRoute("GameView", typeof(Jogo.Views.GameView));
+            Routing.RegisterRoute("MenuPrincipal", typeof(Jogo.Views.MenuPrincipal));
         }
     }
 }
