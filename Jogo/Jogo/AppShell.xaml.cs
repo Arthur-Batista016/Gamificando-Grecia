@@ -7,6 +7,7 @@
             InitializeComponent();
             Routing.RegisterRoute("GameView", typeof(Jogo.Views.GameView));
             Routing.RegisterRoute("MenuPrincipal", typeof(Jogo.Views.MenuPrincipal));
+            Routing.RegisterRoute("Creditos",typeof(Jogo.Views.Creditos));
         }
     }
 }

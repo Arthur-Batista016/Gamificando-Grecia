@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Jogo.Views.Creditos"
+             BackgroundImageSource="background_menu.jpg">
+    <VerticalStackLayout>
+
+        <Grid>
+            <Label 
+            Text="CRIADORES"
+            TextColor="Gray"
+            FontSize="60"
+           />
+        </Grid>
+
+        <Grid Margin="0,380,0,0" HorizontalOptions="Center">
+            <Label
+                Text="LINGUAGENS UTILIZADAS"
+                Margin="0,0,0,0"
+                TextColor="Gray"
+                FontSize="50"
+                />
+
+        </Grid>
+
+
+        <Grid HorizontalOptions="Center">
+            
+
+            <Image
+                Source="csharp.png"
+                HeightRequest="200"
+                Margin="0,0,900,0"
+            />
+            <Image
+                Source="xaml.png"
+                HeightRequest="180"
+                Margin="0,0,250,0"
+             />
+
+            <Image
+                Source="java.png"
+                 HeightRequest="200"
+                Margin="500,0,200,30"
+                />
+
+            <Image
+                Source="sql.png"
+                 HeightRequest="130"
+                Margin="900,0,0,0"
+                />
+
+            
+
+        </Grid>
+
+
+    </VerticalStackLayout>
+</ContentPage>

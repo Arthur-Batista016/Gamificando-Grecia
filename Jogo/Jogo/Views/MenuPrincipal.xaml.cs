@@ -12,5 +12,8 @@ public partial class MenuPrincipal : ContentPage
         await Shell.Current.GoToAsync("GameView");
     }
 
-
+    private async void creditos_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("Creditos");
+    }
 }

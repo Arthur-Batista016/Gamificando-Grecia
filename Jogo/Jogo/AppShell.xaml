@@ -15,5 +15,9 @@
     <ShellContent
         ContentTemplate="{DataTemplate local:GameView}"
         Route="GameView" />
+    <ShellContent
+        ContentTemplate="{DataTemplate local:Creditos}"
+        Route="Creditos"
+        />
 
 </Shell>
