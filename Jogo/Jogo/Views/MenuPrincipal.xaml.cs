@@ -16,4 +16,24 @@ public partial class MenuPrincipal : ContentPage
     {
         await Shell.Current.GoToAsync("Creditos");
     }
+
+    private async void PointerGestureRecognizer_PointerEntered(object sender, PointerEventArgs e)
+    {
+        await iniciar.ScaleTo(1.1, 250, Easing.CubicInOut);
+    }
+
+    private async void PointerGestureRecognizer_PointerExited(object sender, PointerEventArgs e)
+    {
+        await iniciar.ScaleTo(1.0, 250, Easing.CubicInOut);
+    }
+
+    private async void PointerGestureRecognizer_PointerEntered_1(object sender, PointerEventArgs e)
+    {
+        await creditos.ScaleTo(1.1, 250, Easing.CubicInOut);
+    }
+
+    private async void PointerGestureRecognizer_PointerExited_1(object sender, PointerEventArgs e)
+    {
+        await creditos.ScaleTo(1.0, 250, Easing.CubicInOut);
+    }
 }

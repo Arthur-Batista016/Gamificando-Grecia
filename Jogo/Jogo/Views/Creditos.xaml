@@ -2,29 +2,88 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Jogo.Views.Creditos"
-             BackgroundImageSource="background_menu.jpg">
+             BackgroundImageSource="fundo.png"
+             >
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior
+            TextOverride="VOLTAR"
+            />
+    </Shell.BackButtonBehavior>
     <VerticalStackLayout>
 
-        <Grid>
+        <Grid Margin="100,10,0,0">
             <Label 
             Text="CRIADORES"
             TextColor="Gray"
-            FontSize="60"
+            FontSize="50"    
            />
+            <Label 
+                 Text="Arthur Batista"
+                 TextColor="Yellow"
+                 FontSize="40"  
+                Margin="0,70,0,0"
+            />
+            <Label 
+             Text="Matheus Santos"
+             TextColor="Yellow"
+             FontSize="40"    
+               Margin="0,130,0,0"
+            />
+            
+            <Label 
+             Text="Gabriel Whanderson"
+             TextColor="Yellow"
+             FontSize="40"
+             Margin="0,190,0,0"   
+             />
+
+            <Label 
+             Text="Lucas Daido"
+             TextColor="Yellow"
+             FontSize="40"  
+             Margin="0,250,0,0"
+            />
+
+            <Label 
+             Text="Luca Kenzo"
+             TextColor="Yellow"
+             FontSize="40"  
+             Margin="0,310,0,0"
+            />
+            <Label 
+              Text="Fabricio Araujo"
+              TextColor="Yellow"
+              FontSize="40"  
+              Margin="0,370,0,0"
+             />
+
+            <Label 
+                Text="Giuliano"
+                TextColor="Yellow"
+                FontSize="40"  
+                Margin="0,430,0,0"
+             />
+
+            <Image
+                Source="integrantes.jpg"
+                HeightRequest="300"
+                Margin="400,0,0,0"
+                />
+
         </Grid>
 
-        <Grid Margin="0,380,0,0" HorizontalOptions="Center">
+        <Grid Margin="0,20,0,0" HorizontalOptions="Center">
             <Label
                 Text="LINGUAGENS UTILIZADAS"
                 Margin="0,0,0,0"
-                TextColor="Gray"
+                TextColor="LightGray"
                 FontSize="50"
                 />
 
         </Grid>
 
 
-        <Grid HorizontalOptions="Center">
+        <Grid HorizontalOptions="Center" Margin="0,0,0,0">
             
 
             <Image

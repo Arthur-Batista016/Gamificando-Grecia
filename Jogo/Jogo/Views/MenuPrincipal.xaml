@@ -12,6 +12,7 @@
         
         <Grid Margin="0,10,100,0">
             <ImageButton
+            x:Name="iniciar"
             Source="iniciar.png"
             Clicked="jogar_Clicked"
             VerticalOptions="Center"
@@ -19,10 +20,16 @@
             Margin="0,0,200,0"
             HeightRequest="400"
             WidthRequest="250"
-           BackgroundColor="Transparent"
-            />
+            BackgroundColor="Transparent"
+            Scale ="1.0"
+            >
+                <ImageButton.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="PointerGestureRecognizer_PointerEntered" PointerExited="PointerGestureRecognizer_PointerExited"/>
+                </ImageButton.GestureRecognizers>
+                
+            </ImageButton>
 
-        <ImageButton
+            <ImageButton
             x:Name="creditos"
             Clicked="creditos_Clicked"
             Source="creditos.png"
@@ -32,8 +39,12 @@
             HeightRequest="400"
             WidthRequest="250"
             BackgroundColor="Transparent"
-            
-            />
+            Scale="1.0"
+            >
+                <ImageButton.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="PointerGestureRecognizer_PointerEntered_1" PointerExited="PointerGestureRecognizer_PointerExited_1"/>
+                </ImageButton.GestureRecognizers>
+            </ImageButton>
 
         </Grid>
     </VerticalStackLayout>
