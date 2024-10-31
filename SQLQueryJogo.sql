@@ -39,9 +39,9 @@ INSERT INTO Personagens VALUES('Alexios', 'O inimigo avança em formação.', 'Mant
 INSERT INTO Personagens VALUES('Arqueiros inimigos', 'Arqueiros estão posicionados na colina.', 'Recuem para não sermos atingidos.', 'Procurem locais para se defenderem.');
 INSERT INTO Personagens VALUES('Muitas baixas', 'Ocasionamos diversas baixas inimigas, devemos continuar nesse ritmo.', 'Continuar com força total.', 'Ir mais na defensiva.');
 INSERT INTO Personagens VALUES('O fim da batalha', 'Estamos quase vencendo.', 'Finalizar todos os restantes.', 'Poupar os restantes.');
---                                                                                      Mantimentos Exercito Confiança
-INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (1, -15, 0, 10);
-INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (1, -10, 0, 10);
+--                                                                                 Mantimentos Exercito Confiança
+INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (1, -15, 0, 0);
+INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (1, -10, 0, 0);
 
 INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (2, -15, 0, 15);
 INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (2, -5, -15, -20);
@@ -99,3 +99,6 @@ INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisCon
 
 INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (20, -5, -20, -15);
 INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (20, -10, -15, -10);
+
+
+select PersonOpc1,PersonOpc2 from Personagens

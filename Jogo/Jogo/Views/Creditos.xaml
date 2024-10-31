@@ -2,117 +2,132 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Jogo.Views.Creditos"
-             BackgroundImageSource="fundo.png"
-             >
+             BackgroundImageSource="fundo_creditos.jpg">
+
     <Shell.BackButtonBehavior>
-        <BackButtonBehavior
-            TextOverride="VOLTAR"
-            />
+        <BackButtonBehavior TextOverride="VOLTAR" />
     </Shell.BackButtonBehavior>
+
     <VerticalStackLayout>
 
-        <Grid Margin="100,10,0,0">
-            <Label 
-            Text="CRIADORES"
-            TextColor="Gray"
-            FontSize="50"    
-           />
-            <Label 
-                 Text="Arthur Batista"
-                 TextColor="Yellow"
-                 FontSize="40"  
-                Margin="0,70,0,0"
-            />
-            <Label 
-             Text="Matheus Santos"
-             TextColor="Yellow"
-             FontSize="40"    
-               Margin="0,130,0,0"
-            />
-            
-            <Label 
-             Text="Gabriel Whanderson"
-             TextColor="Yellow"
-             FontSize="40"
-             Margin="0,190,0,0"   
-             />
+        <!-- BoxView para escurecer o fundo e dar contraste ao texto -->
+        <BoxView Color="Black" Opacity="0.6" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
 
+        
             <Label 
-             Text="Lucas Daido"
-             TextColor="Yellow"
-             FontSize="40"  
-             Margin="0,250,0,0"
-            />
+                Text="CRIADORES"
+                TextColor="WhiteSmoke"
+                FontSize="50"
+                Margin="130,0,0,0"
+                 />
 
-            <Label 
-             Text="Luca Kenzo"
-             TextColor="Yellow"
-             FontSize="40"  
-             Margin="0,310,0,0"
-            />
-            <Label 
-              Text="Fabricio Araujo"
-              TextColor="Yellow"
-              FontSize="40"  
-              Margin="0,370,0,0"
-             />
 
+            <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="300" Margin="0,0,1000,0">
+                <Label 
+                Text="Arthur Batista"
+                TextColor="Black"
+                FontSize="30"
+                Margin="30,0,0,0"
+                HorizontalOptions="Start"
+                VerticalOptions="Start" 
+                BackgroundColor="White"
+                />
+            </Border>
+
+        <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="300" Margin="0,0,1000,0">
             <Label 
-                Text="Giuliano"
-                TextColor="Yellow"
-                FontSize="40"  
-                Margin="0,430,0,0"
-             />
+                Text="Matheus Santos"
+                TextColor="Black"
+                FontSize="30"
+                Margin="10,0,0,0"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                BackgroundColor="White"
+                />
+        </Border>
+
+
+        <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="300" Margin="0,0,1000,0">
+            <Label 
+                Text="Gabriel Whanderson"
+                TextColor="Black"
+                FontSize="28"
+                Margin="10,0,0,0"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                BackgroundColor="White"
+                WidthRequest="350"/>
+        </Border>
+
+        <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="300" Margin="0,0,1000,0">
+            <Label 
+                Text="Lucas Daido"
+                TextColor="Black"
+                FontSize="30"
+                Margin="40,0,0,0"
+                HorizontalOptions="Start"
+                VerticalOptions="Start" />
+        </Border>
+
+        <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="300" Margin="0,0,1000,0">
+            <Label 
+                Text="Luca Kenzo"
+                TextColor="Black"
+                FontSize="30"
+                Margin="50,0,0,0"
+                HorizontalOptions="Start"
+                VerticalOptions="Start" />
+        </Border>
+
+        <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="300" Margin="0,0,1000,0">
+            <Label 
+                Text="Fabricio Araujo"
+                TextColor="Black"
+                FontSize="30"
+                Margin="400,0,0,0"
+                 />
+        </Border>
+
+        <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="300" Margin="0,0,1000,0">
+            <Label 
+                Text="Giuliano Orbeli"
+                TextColor="Black"
+                FontSize="30"
+                Margin="0,0,0,0"
+                HorizontalOptions="Start"
+                VerticalOptions="Start" />
+        </Border>
 
             <Image
                 Source="integrantes.jpg"
-                HeightRequest="300"
-                Margin="400,0,0,0"
-                />
+                HeightRequest="400"
+                Margin="0,-350,0,0"
+                HorizontalOptions="End"
+                VerticalOptions="Center" />
 
-        </Grid>
 
-        <Grid Margin="0,20,0,0" HorizontalOptions="Center">
+        <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="600" HorizontalOptions="Center" Margin="0,20,0,0">
             <Label
                 Text="LINGUAGENS UTILIZADAS"
-                Margin="0,0,0,0"
-                TextColor="LightGray"
-                FontSize="50"
+                Margin="0,20,0,0"
+                TextColor="#446066"
+                FontSize="45"
+                HorizontalOptions="Center"
+                
                 />
+        </Border>
+       
 
-        </Grid>
 
-
-        <Grid HorizontalOptions="Center" Margin="0,0,0,0">
+                <Grid HorizontalOptions="Center">
+            <Border BackgroundColor="Gray"  StrokeShape="RoundRectangle 40,40,40,40" WidthRequest="1200" >
+                <Image Source="csharp.png" HeightRequest="180" Margin="70,0,900,0" />
+            </Border>
+            <Image Source="xaml.png" HeightRequest="160" Margin="0,0,250,0" />
+            <Image Source="java.png" HeightRequest="180" Margin="500,0,200,30" />
+            <Image Source="sql.png" HeightRequest="110" Margin="830,0,0,0" />
             
-
-            <Image
-                Source="csharp.png"
-                HeightRequest="200"
-                Margin="0,0,900,0"
-            />
-            <Image
-                Source="xaml.png"
-                HeightRequest="180"
-                Margin="0,0,250,0"
-             />
-
-            <Image
-                Source="java.png"
-                 HeightRequest="200"
-                Margin="500,0,200,30"
-                />
-
-            <Image
-                Source="sql.png"
-                 HeightRequest="130"
-                Margin="900,0,0,0"
-                />
-
-            
-
         </Grid>
-
 
     </VerticalStackLayout>
 </ContentPage>
