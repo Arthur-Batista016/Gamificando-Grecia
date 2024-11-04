@@ -18,6 +18,9 @@ namespace Jogo.ViewModels
         [ObservableProperty]
         private Medidor medidor;
 
+        [ObservableProperty]
+        private string corTxt = "black";
+
 
         [ObservableProperty]
         private string texto = "General, o caminho será longo, deveríamos seguir para o Oeste ou para o Noroeste.";
@@ -211,6 +214,19 @@ namespace Jogo.ViewModels
                  Txtopc1 = Carta.PersonOpc1;
                 Txtopc2 = Carta.PersonOpc2;
             }     
+
+
+            if(Id == 2 ||Id == 3 || Id == 6 || Id == 7 || Id == 14) {
+                CorTxt = "White";
+            }
+
+          
+            else
+            {
+                CorTxt = "black";
+            }
+
+
             
         }
 
@@ -221,7 +237,7 @@ namespace Jogo.ViewModels
             DiasGuerra = DiasGuerra -  1;
             Convert.ToString(DiasGuerra);
             if (Count == 0 && DiasGuerra == 0) {
-                MomentoGuerra = "DURAÇÂO DA GUERRA:";
+                MomentoGuerra = "DIAS PARA O FIM DA GUERRA:";
                 InicioGuerra = true;
                 Count = 1;
                 DiasGuerra = 5;

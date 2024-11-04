@@ -2,14 +2,12 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Jogo.Views.GameView"
-             BackgroundImageSource="fundo_jogo.jpg">
+             BackgroundImageSource="fundo_jogo.png">
     <VerticalStackLayout>
         <Border  Stroke="Beige"  StrokeThickness="4"  StrokeShape="RoundRectangle 0,0,40,40" Background="Beige" WidthRequest="600" >
             <Grid BackgroundColor="Beige" HeightRequest="100" WidthRequest="500" Margin="0,40,0,0">
 
-                <Label
-                    Text="{Binding IdMedidor}"
-                    />
+                
                 <Image
                 Source="medidor_mantimento.png"
                 HeightRequest="90"
@@ -96,8 +94,10 @@
                     LineBreakMode="CharacterWrap"
                      HeightRequest="160"
                     WidthRequest="160"
-                    TextColor="Black"
+                    TextColor="{Binding CorTxt}"
                     FontSize="15"
+                    FontAttributes="Bold"
+                    FontFamily="Free serif"
                     />
 
                 
@@ -111,7 +111,9 @@
              HorizontalTextAlignment="Center"
              Text="{Binding Name}"
              TextColor="White"
-              FontSize="15"/>
+              FontSize="15"
+              FontAttributes="Bold"
+             />
 
 
 
@@ -356,21 +358,24 @@
         <Grid>
             <Label
                 Text="{Binding MomentoGuerra}"
-                TextColor="White"
-                Margin="0,60,0,0"
+                TextColor="Black"
+                Margin="0,90,0,0"
                 FontSize="Large"
                 FontAttributes="Bold"
                 HorizontalOptions="Center"
+                FontFamily="free serif"
+                
                 />
             
 
             <Label
              Text="{Binding DiasGuerra}"
-             TextColor="White"
-             Margin="400,60,0,0"
+             TextColor="Black"
+             Margin="400,90,0,0"
              FontSize="Large"
              FontAttributes="Bold"
              HorizontalOptions="Center"
+             FontFamily="Free Serif"
              />
 
         </Grid>

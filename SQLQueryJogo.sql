@@ -1,7 +1,9 @@
 CREATE DATABASE GreciaGames;
 USE GreciaGames;
 use master;
+use model;
 drop database GreciaGames
+
 CREATE TABLE Personagens(
     PersonId INT NOT NULL PRIMARY KEY IDENTITY,
 	PersonName VARCHAR(30) NOT NULL,
@@ -97,8 +99,8 @@ INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisCon
 INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (19, -15, -15, -10);
 INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (19, -5, -10, -5);
 
-INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (20, -5, -20, -15);
-INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (20, -10, -15, -10);
+INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (20, -5, -5, -15);
+INSERT INTO Medidores (PersonId, EstatisMantimentos, EstatisExercito, EstatisConfianca) VALUES (20, -10, 0, -10);
 
 
 select PersonOpc1,PersonOpc2 from Personagens
