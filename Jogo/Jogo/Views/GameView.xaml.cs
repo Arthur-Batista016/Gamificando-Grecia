@@ -72,4 +72,16 @@ public partial class GameView : ContentPage
     {
         await derrota.ScaleTo(1.0, 250, Easing.CubicInOut);
     }
+
+  
+
+    private async void PointerGestureRecognizer_PointerEntered_5(object sender, PointerEventArgs e)
+    {
+        await button.ScaleTo(1.2, 250, Easing.CubicInOut);
+    }
+
+    private async void PointerGestureRecognizer_PointerExited_5(object sender, PointerEventArgs e)
+    {
+        await button.ScaleTo(1.0, 250, Easing.CubicInOut);
+    }
 }

@@ -36,4 +36,13 @@ public partial class MenuPrincipal : ContentPage
     {
         await creditos.ScaleTo(1.0, 250, Easing.CubicInOut);
     }
+
+
+
+
+    
+
+
+
+
 }

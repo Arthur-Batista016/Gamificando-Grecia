@@ -13,6 +13,9 @@ namespace Jogo.ViewModels
         private int id=1;
 
         [ObservableProperty]
+        private bool inicio = true;
+
+        [ObservableProperty]
         private Carta carta;
 
         [ObservableProperty]
@@ -283,6 +286,7 @@ namespace Jogo.ViewModels
             InicioGuerra = false;
             FimGuerra = false;
             Derrota = false;
+            Inicio = false;
           
         }
 

@@ -88,14 +88,14 @@
             <Grid WidthRequest="260" Margin="0,60,0,0" HeightRequest="400">
                 <Image Source="{Binding Image}"  HeightRequest="600" Margin="0,50,0,0" />
                 <Label 
-                     Margin="40,0,40,140"
+                     Margin="40,-20,40,140"
                      HorizontalTextAlignment="Center"
                      Text="{Binding Texto}"
                     LineBreakMode="CharacterWrap"
                      HeightRequest="160"
                     WidthRequest="160"
                     TextColor="{Binding CorTxt}"
-                    FontSize="15"
+                    FontSize="16"
                     FontAttributes="Bold"
                     FontFamily="Free serif"
                     />
@@ -160,11 +160,78 @@
                                               PointerExited="PointerGestureRecognizer_PointerExited"/>
                 </ImageButton.GestureRecognizers>
             </ImageButton>
-           
 
-            <!--AVISO DE INICIO DE GUERRA-->
+
+
+
+
+
+
             <BoxView
-                IsVisible="{Binding InicioGuerra}"
+     IsVisible="{Binding InicioGuerra}"
+     BackgroundColor="Black"
+     Opacity="0.6"
+     InputTransparent="True"
+     VerticalOptions="FillAndExpand"
+     HorizontalOptions="FillAndExpand"/>
+
+            <Image
+         IsVisible="{Binding InicioGuerra}"
+         Source="background_alert.png"
+         HeightRequest="600"
+         WidthRequest="2000"
+          HorizontalOptions="FillAndExpand"
+       
+         />
+
+            <Label
+         IsVisible="{Binding InicioGuerra}"
+         Text="A GUERRA COMEÇOU"
+          HorizontalOptions="Center"
+          Margin="0,120,0,0"
+          FontSize="30"
+         FontAttributes="Bold"
+         TextColor="Black"
+        
+         />
+            <Label
+     IsVisible="{Binding InicioGuerra}"
+     Text="AGORA SEUS MEDIDORES NÂO IRAM SUBIR MAIS!"
+      HorizontalOptions="Center"
+      Margin="0,220,0,0"
+      FontSize="25"
+     FontAttributes="Bold"
+     TextColor="Black"
+   
+     />
+
+            <Button
+     x:Name="inicio"
+      Text="OK"
+      IsVisible="{Binding InicioGuerra}"
+      Command="{Binding FecharAvisoCommand}"
+      HeightRequest="70"
+      WidthRequest="200"
+      Margin="0,200,0,0"
+     BackgroundColor="Gray"
+    >
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="PointerGestureRecognizer_PointerEntered_2" PointerExited="PointerGestureRecognizer_PointerExited_2"/>
+                </Button.GestureRecognizers>
+
+
+
+
+
+
+            </Button>
+
+
+
+
+            <!--AVISO DE INICIO DE JOGO-->
+            <BoxView
+                IsVisible="{Binding Inicio}"
                 BackgroundColor="Black"
                 Opacity="0.6"
                 InputTransparent="True"
@@ -172,7 +239,8 @@
                 HorizontalOptions="FillAndExpand"/>
 
                 <Image
-                    IsVisible="{Binding InicioGuerra}"
+                    x:Name="image"
+                    IsVisible="{Binding Inicio}"
                     Source="background_alert.png"
                     HeightRequest="600"
                     WidthRequest="2000"
@@ -181,43 +249,52 @@
                     />
 
                 <Label
-                    IsVisible="{Binding InicioGuerra}"
-                    Text="A GUERRA COMEÇOU"
+                    x:Name="label"
+                    IsVisible="{Binding Inicio}"
+                    Text="Leônidas... Os persas chegam em 15 dias... Você deve interceptá-los no desfiladeiro das Termópilas... Eu, o Oráculo, te mostrarei o futuro nas cartas."
                      HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"
                      Margin="0,120,0,0"
-                     FontSize="30"
+                     FontSize="28"
+                    WidthRequest="600"
                     FontAttributes="Bold"
                     TextColor="Black"
+                    
                    
                     />
+
             <Label
-                IsVisible="{Binding InicioGuerra}"
-                Text="AGORA SEUS MEDIDORES NÂO IRAM SUBIR MAIS!"
+               
+                IsVisible="{Binding Inicio}"
+                Text="Tome as melhores decisões e garanta a vitória de Esparta..."
                  HorizontalOptions="Center"
-                 Margin="0,220,0,0"
-                 FontSize="25"
+                LineBreakMode="WordWrap"
+                 Margin="0,300,0,0"
+                 FontSize="28"
+                WidthRequest="600"
                 FontAttributes="Bold"
                 TextColor="Black"
+
    
                 />
 
+
             <Button
-                x:Name="inicio"
+                x:Name="button"
                  Text="OK"
-                 IsVisible="{Binding InicioGuerra}"
+                 IsVisible="{Binding Inicio}"
                  Command="{Binding FecharAvisoCommand}"
                  HeightRequest="70"
                  WidthRequest="200"
-                 Margin="0,200,0,0"
+                 Margin="0,300,0,0"
                 BackgroundColor="Gray"
+                Scale="1.0"
                >
-                <Button.GestureRecognizers>
-                    <PointerGestureRecognizer PointerEntered="PointerGestureRecognizer_PointerEntered_2" PointerExited="PointerGestureRecognizer_PointerExited_2"/>
-                </Button.GestureRecognizers>
-
-
-
-            </Button>
+                    <Button.GestureRecognizers>
+                        <PointerGestureRecognizer PointerEntered="PointerGestureRecognizer_PointerEntered_5"  PointerExited="PointerGestureRecognizer_PointerExited_5"/>
+                    </Button.GestureRecognizers>
+               </Button>
+                
             <!--AVISO DE FIM DE GUERRA-->
             <BoxView
             IsVisible="{Binding FimGuerra}"
@@ -371,7 +448,7 @@
             <Label
              Text="{Binding DiasGuerra}"
              TextColor="Black"
-             Margin="400,90,0,0"
+             Margin="510,90,0,0"
              FontSize="Large"
              FontAttributes="Bold"
              HorizontalOptions="Center"

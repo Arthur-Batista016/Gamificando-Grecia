@@ -106,7 +106,7 @@
                 VerticalOptions="Center" />
 
 
-        <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="600" HorizontalOptions="Center" Margin="0,80,0,0">
+        <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="600" HorizontalOptions="Center" Margin="0,50,0,0">
             <Label
                 Text="LINGUAGENS UTILIZADAS"
                 Margin="0,0,0,0"
