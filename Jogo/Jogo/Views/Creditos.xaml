@@ -18,11 +18,11 @@
                 Text="CRIADORES"
                 TextColor="WhiteSmoke"
                 FontSize="50"
-                Margin="230,0,0,0"
+                Margin="130,0,0,0"
                  />
 
 
-            <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="300" Margin="190,0,1000,0">
+            <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="300" Margin="100,0,1000,0">
                 <Label 
                 Text="Arthur Batista"
                 TextColor="Black"
@@ -34,7 +34,7 @@
                 />
             </Border>
 
-        <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="300" Margin="190,0,1000,0">
+        <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="300" Margin="100,0,1000,0">
             <Label 
                 Text="Matheus Santos"
                 TextColor="Black"
@@ -47,11 +47,11 @@
         </Border>
 
 
-        <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="300" Margin="190,0,1000,0">
+        <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="300" Margin="100,0,1000,0">
             <Label 
                 Text="Gabriel Whanderson"
                 TextColor="Black"
-                FontSize="28"
+                FontSize="27"
                 Margin="10,0,0,0"
                 HorizontalOptions="Start"
                 VerticalOptions="Start"
@@ -59,7 +59,7 @@
                 WidthRequest="350"/>
         </Border>
 
-        <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="300" Margin="190,0,1000,0">
+        <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="300" Margin="100,0,1000,0">
             <Label 
                 Text="Lucas Daido"
                 TextColor="Black"
@@ -69,7 +69,7 @@
                 VerticalOptions="Start" />
         </Border>
 
-        <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="300" Margin="190,0,1000,0">
+        <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="300" Margin="100,0,1000,0">
             <Label 
                 Text="Luca Kenzo"
                 TextColor="Black"
@@ -79,7 +79,7 @@
                 VerticalOptions="Start" />
         </Border>
 
-        <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="300" Margin="190,0,1000,0">
+        <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="300" Margin="100,0,1000,0">
             <Label 
                 Text="Fabricio Araujo"
                 TextColor="Black"
@@ -88,7 +88,7 @@
                  />
         </Border>
 
-        <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="300" Margin="190,0,1000,0">
+        <Border  Stroke="White"  StrokeThickness="2"  StrokeShape="RoundRectangle 40,40,40,40" Background="White" WidthRequest="300" Margin="100,0,1000,0">
             <Label 
                 Text="Giuliano Orbeli"
                 TextColor="Black"
