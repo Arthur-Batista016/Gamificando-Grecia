@@ -219,7 +219,7 @@ namespace Jogo.ViewModels
             }     
 
 
-            if(Id == 2 ||Id == 3 || Id == 6 || Id == 7 || Id == 14) {
+            if(Id == 2 ||Id == 3 |Id==4|| Id == 6 || Id == 7 || Id == 14) {
                 CorTxt = "White";
             }
 

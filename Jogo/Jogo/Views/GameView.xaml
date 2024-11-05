@@ -60,7 +60,9 @@
                  LineBreakMode="CharacterWrap"
                  VerticalTextAlignment="Center"  
                  Margin="130,0,170,0"
-                 FontSize="20"/>
+                 FontSize="20"
+                 FontFamily="Free serif"   
+                    />
            
 
 
@@ -140,6 +142,7 @@
                 Margin="170,0,0,0"
                 LineBreakMode="CharacterWrap"
                 FontSize="20"
+                FontFamily="free serif"
   
                 />
             <ImageButton
@@ -289,6 +292,7 @@
                  Margin="0,300,0,0"
                 BackgroundColor="Gray"
                 Scale="1.0"
+                FontAttributes="Bold"
                >
                     <Button.GestureRecognizers>
                         <PointerGestureRecognizer PointerEntered="PointerGestureRecognizer_PointerEntered_5"  PointerExited="PointerGestureRecognizer_PointerExited_5"/>
