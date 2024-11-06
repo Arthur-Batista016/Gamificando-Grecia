@@ -60,7 +60,7 @@ public partial class GameView : ContentPage
 
     private async void PointerGestureRecognizer_PointerExited_3(object sender, PointerEventArgs e)
     {
-        await fim.ScaleTo(1.0, 250, Easing.CubicInOut);
+       await fim.ScaleTo(1.0, 250, Easing.CubicInOut);
     }
 
     private async void PointerGestureRecognizer_PointerEntered_4(object sender, PointerEventArgs e)
@@ -83,5 +83,16 @@ public partial class GameView : ContentPage
     private async void PointerGestureRecognizer_PointerExited_5(object sender, PointerEventArgs e)
     {
         await button.ScaleTo(1.0, 250, Easing.CubicInOut);
+    }
+
+
+    private async void PointerGestureRecognizer_PointerEntered_7(object sender, PointerEventArgs e)
+    {
+        await alternativo.ScaleTo(1.2,250, Easing.CubicInOut);
+    }
+
+    private async void PointerGestureRecognizer_PointerExited_7(object sender, PointerEventArgs e)
+    {
+        await alternativo.ScaleTo(1.0,250, Easing.CubicInOut);
     }
 }

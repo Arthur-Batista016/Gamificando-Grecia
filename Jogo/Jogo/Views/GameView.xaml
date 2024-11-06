@@ -371,6 +371,70 @@
             </Button>
 
 
+
+
+            <!--AVISO DE FINAl ALTERNATIVO-->
+            <BoxView
+               IsVisible="{Binding FinalAlternativo}"
+               BackgroundColor="Black"
+               Opacity="0.6"
+               InputTransparent="True"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="FillAndExpand"/>
+
+            <Image
+           IsVisible="{Binding FinalAlternativo}"
+           Source="background_alert.png"
+           HeightRequest="600"
+           WidthRequest="2000"
+            HorizontalOptions="FillAndExpand"
+        />  
+
+            <Label
+           IsVisible="{Binding FinalAlternativo}"
+           Text="BAD ENDING"
+           TextColor="Black"
+           HorizontalOptions="Center"
+           Margin="0,100,0,0"
+           FontAttributes="Bold"
+           FontSize="25"
+       />
+
+            <Label
+             IsVisible="{Binding FinalAlternativo}"
+             Text="Após se renderem ao exército Persa, você e seu exército foram feitos de escravos e sua nação invadida e dominada por eles."
+             TextColor="Black"
+             LineBreakMode="CharacterWrap"
+             HorizontalOptions="Center"
+             HorizontalTextAlignment="Center"
+             Margin="0,170,0,0"
+             FontAttributes="Bold"
+             FontSize="20"
+             WidthRequest="400"
+   
+    />
+
+            <Button
+            x:Name="alternativo"
+            Text="VOLTAR AO MENU"
+            IsVisible="{Binding FinalAlternativo}"
+            Command="{Binding FecharAvisoCommand}"
+            Clicked="voltar_menu_Clicked"
+            HeightRequest="80"
+            WidthRequest="150"
+            Margin="0,310,0,0"
+            BackgroundColor="Gray"
+            FontAttributes="Bold"
+           >
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="PointerGestureRecognizer_PointerEntered_7"  PointerExited="PointerGestureRecognizer_PointerExited_7"/>
+                </Button.GestureRecognizers>
+
+            </Button>
+
+
+
+
             <!--AVISO DE DERROTA-->
             <BoxView
              IsVisible="{Binding Derrota}"
@@ -419,6 +483,7 @@
               HeightRequest="80"
               WidthRequest="150"
               BackgroundColor="Gray"
+                Scale="1.0"
              >
                 <Button.GestureRecognizers>
                     <PointerGestureRecognizer PointerEntered="PointerGestureRecognizer_PointerEntered_4"  PointerExited="PointerGestureRecognizer_PointerExited_4"/>

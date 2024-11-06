@@ -24,6 +24,9 @@ namespace Jogo.ViewModels
         [ObservableProperty]
         private string corTxt = "black";
 
+        [ObservableProperty]
+        private bool finalAlternativo= false;
+
 
         [ObservableProperty]
         private string texto = "General, o caminho será longo, deveríamos seguir para o Oeste ou para o Noroeste.";
@@ -229,6 +232,9 @@ namespace Jogo.ViewModels
                 CorTxt = "black";
             }
 
+           
+            
+
 
             
         }
@@ -239,16 +245,23 @@ namespace Jogo.ViewModels
            
             DiasGuerra = DiasGuerra -  1;
             Convert.ToString(DiasGuerra);
+            
             if (Count == 0 && DiasGuerra == 0) {
                 MomentoGuerra = "DIAS PARA O FIM DA GUERRA:";
                 InicioGuerra = true;
                 Count = 1;
                 DiasGuerra = 5;
 
+
+                if (Id == 16 && opcao == 2)
+                {
+                    FinalAlternativo = true;
+                    InicioGuerra = false;
+                }
+
             }
             if(DiasGuerra == 0 && Count == 1)
             {
-                /* arrumar para o medido manter-se no 0 e quando for para o menu, e iniciar um novo jogo, volte ao inicio padrao*/
                 if (Derrota == false)
                 {
                     InicioGuerra = false;
@@ -287,6 +300,7 @@ namespace Jogo.ViewModels
             FimGuerra = false;
             Derrota = false;
             Inicio = false;
+            FinalAlternativo = false;
           
         }
 
